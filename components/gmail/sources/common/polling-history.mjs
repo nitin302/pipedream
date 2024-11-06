@@ -91,6 +91,14 @@ export default {
       } catch {
         console.log(`Message ${id} not found`);
       }
+
+      let thread = await this.gmail.getThread({
+        threadId: message.threadId,
+      });
+      message = {
+        ...message,
+        thread: thread,
+      };
       this.emitEvent(message);
     },
   },

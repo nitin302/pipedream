@@ -364,6 +364,13 @@ export default {
       });
       return data;
     },
+    async getThread({ threadId }) {
+      const { data } = await this._client().users.threads.get({
+        userId: constants.USER_ID,
+        id: threadId,
+      });
+      return data;
+    },
     async getMessageSubject({ id }) {
       const message = await this.getMessage({
         id,

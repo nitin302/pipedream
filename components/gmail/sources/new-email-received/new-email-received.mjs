@@ -11,11 +11,11 @@ import verifyClient from "../common/verify-client-id.mjs";
 
 export default {
   ...common,
-  key: "gmail-new-email-received",
-  name: "New Email Received",
+  key: "gmail-new-email-received-fk",
+  name: "New Email Received FK",
   description: "Emit new event when a new email is received.",
   type: "source",
-  version: "0.1.7",
+  version: "0.1.8",
   dedupe: "unique",
   props: {
     gmail,
